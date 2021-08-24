@@ -165,18 +165,27 @@ button:disabled {
 }
 
 .login {
+    background-image: url("./images/fitness2.jpg");
+    opacity: 0.5;
     color: #fcfcfc;
     text-shadow: -3px -3px 3px #0c0202 , 3px 3px 3px black;
     font-weight: bold;
     padding-top: 10vh;
     background-image: url("./images/fitness2.jpg");
+    opacity: 1;
     /*background-color: #ccde72;*/
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 83vh;
+    height: 84vh;
 }
+
+
+
+
 .fitness-header a {
     text-decoration: none;
     color: #1c5d76;
 }
+
+
