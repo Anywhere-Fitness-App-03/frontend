@@ -71,7 +71,7 @@ useEffect(()=>AccountSchema.isValid(info).then(valid => {
 
     const submit = (event) => {
         event.preventDefault()
-        axios.post("adddresthatwegiveit", info)
+        axios.post("www.changeMeLater.com", info)
             .then(response => {axiosSuccess(response.data)
                 setInfo({name: '', lastName: "", email: "",password: '',terms: false,})})
             .catch(err => {
@@ -81,7 +81,8 @@ useEffect(()=>AccountSchema.isValid(info).then(valid => {
                 }
 
             )
-        console.log(axiosFail)
+        props.history.push('/login', {email:info.email})
+        // console.log(axiosFail)
     }
 
 

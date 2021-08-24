@@ -2,10 +2,11 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios'
 import * as yup from 'yup'
 import LoginSchema from './Schema/LoginSchema'
-
+import {Link, useHistory} from "react-router-dom";
 
 const errorMassage =' Login was not successful please try again'
-const Login = () => {
+const Login = (props) => {
+
     const [login,setLogin] = useState({
         email:'',
         password:''
@@ -18,6 +19,7 @@ const Login = () => {
     const [disabled,setDisabled] = useState(true)
     const [axiosSuccess , setAxiosSuccess] = useState()
     const  [axiosFail ,setAxiosFail] = useState()
+     const {push}=useHistory()
 
     useEffect(()=>{
         LoginSchema.isValid(login).then(valid => {
@@ -41,7 +43,9 @@ const Login = () => {
     };
 
 
-
+const attachWelcome = (address) => {
+    props.history.push(address);
+}
 
 const change = (event) => {
     event.persist()
@@ -53,10 +57,11 @@ const change = (event) => {
 
     const  submit = (event)=> {
         event.preventDefault()
-        axios.post("changeMeLater.com",login)
+        axios.post("www.cahngeME.com",login)
             .then(response => {
                 setAxiosSuccess(response.data)
                 setLogin({ email:'', password:''})
+                attachWelcome("/login/welcome")
             })
             .catch(error => {
                 setLogin({ email:'', password:''})
@@ -78,7 +83,9 @@ const change = (event) => {
          </label>
          {errors.password.length > 0? <p className={'error'}>{errors.password}</p>:null}
  <br/>
-         <button disabled={disabled} type={'submit'}>Login</button>
+         {/*<Link to="/account">*/}
+         <button disabled={disabled} type={'submit'} onClick={attachWelcome}>Login</button>
+         {/*</Link>*/}
          {axiosFail=== errorMassage? <h3 className={"errorMassage"}> {errorMassage}</h3> :null}
 
      </form>

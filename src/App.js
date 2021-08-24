@@ -6,7 +6,7 @@ import Home from './components/Home.js'
 import Account from './components/Account'
 import Login from './components/Login'
 import About from './components/About'
-
+import  Welcome from  './components/WelcomePage'
 
 
 function App() {
@@ -25,12 +25,14 @@ function App() {
         </nav>
 
         <Switch>
+            <Route path='/login/welcome' component={Welcome}/>
+            {/*<Route path='/account/welcome' component={Welcome}/>*/}
             <Route path={'/login'}  component={Login} />
             <Route path={'/account'}  component={Account} />
             <Route path={'/about'}  component={About} />
             <Route path={'/'}  component={Home} />
 
-  =
+
 
         </Switch>
 
