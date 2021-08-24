@@ -64,6 +64,7 @@ const change = (event) => {
     }
     return (
         <div className={"login"} >
+
      <form onSubmit={submit}>
          <label htmlFor={'email'}>
              Email:
@@ -81,7 +82,8 @@ const change = (event) => {
          {axiosFail=== errorMassage? <h3 className={"errorMassage"}> {errorMassage}</h3> :null}
 
      </form>
-        </div>
+            </div>
+
     )
 
 }
