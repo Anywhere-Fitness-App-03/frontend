@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+
+    font-size:1.3rem;
+
 }
 
 .App-logo {
@@ -35,4 +38,145 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.home-wrapper {
+    background-color: #210d42;
+    background-blend-mode: screen;
+    background-image:url(./images/fitness.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 91vh;
+
+}
+
+nav {
+    color: #1c5d76;
+    padding: 0 16px;
+    border-bottom: 1px solid #efefef;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+}
+.nav-link  {
+    display: flex;
+    justify-content: space-between;
+
+}
+.nav-link a {
+    text-decoration: none;
+    color: #1c5d76;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.home-wrapper {
+    font-size: 48px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-shadow: 5px 4px black;
+}
+.home-wrapper h1 {
+    font-size: 48px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+    font-size: 1.4rem;
+}
+input{
+    width: 100%;
+    margin: 5px 0 0;
+    display: block;
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    background-color: white;
+}
+input:focus {
+    outline: none;
+    border-color: #1ee7e2;
+}
+
+button {
+
+    width: 150px;
+    display: inline-block;
+    padding: 8px 11px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    outline: none;
+    background-color: #4dd0e1;
+    background-image: linear-gradient(to right, #4dd0e1, #1ee7e2);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-image: none;
+    background-color: #4dd0e1;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+    background-image: none;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.1);
+    cursor: not-allowed;
+}
+.error , .errorMassage{
+    font-size: 1.2rem;
+    color: red;
+}
+
+.terms {
+    display: inline-block;
+    align-self: self-start;
+}
+
+.terms input {
+    width: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.login {
+    color: #fcfcfc;
+    text-shadow: -3px -3px 3px #0c0202 , 3px 3px 3px black;
+    font-weight: bold;
+    padding-top: 10vh;
+    background-image: url("./images/fitness2.jpg");
+    /*background-color: #ccde72;*/
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 83vh;
+}
+.fitness-header a {
+    text-decoration: none;
+    color: #1c5d76;
 }
