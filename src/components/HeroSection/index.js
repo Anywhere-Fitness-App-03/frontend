@@ -8,7 +8,15 @@ const HeroSection = () => {
         <>
         <HeroContainer id={'home'}>
             <HeroBg>
-            <div >
+        
+           
+                <VideoBg autoPlay loop muted src={Video} type={'video/mp4'}/>
+                
+              
+    
+            </HeroBg>
+
+            <div className="contentUndervid" >
 
 <h1 className="heroh1">Ready to Join?</h1>
 
@@ -16,12 +24,6 @@ const HeroSection = () => {
 <button   >Create Account</button>
 </Link>
 </div>
-           
-                <VideoBg autoPlay loop muted src={Video} type={'video/mp4'}/>
-                
-              
-    
-            </HeroBg>
         </HeroContainer>
 
         </>
